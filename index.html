@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Project Divyang</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <script src="js/main.js" ></script>
+        <script src="js/commonfunction.js" ></script>
+    </head>
+    <body onload="fnGetDate(); fnGetData();">
+        <div id="main">
+            <div id="header">
+                <div id="logo">
+                    <div id="logo_text">
+                        <h1><a href="index.html">Company Logo</a></h1>
+                        <h2>Tag Line</h2>
+                    </div>
+                    <span style="float: right; margin-top: 10px;">
+                        <i>
+                            <font color="white">
+                            Today's date is :
+                            <strong>
+                                <span id="time"></span>
+                            </strong>
+                            </font>
+                        </i>
+                    </span>
+                </div>
+                <div id="menubar">
+                    <ul id="menu">
+                        <li class="selected"><a href="index.html">Home</a></li>
+                        <li><a href="#">Beauty</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <table style="margin: 0 auto; width: 100%; text-align: center; margin-top: 15px; margin-bottom: 15px;">
+                <tr>
+                    <td rowspan="7" style="width: 15%; text-align: center;">
+                        <a href="#" onclick="fnGetPrevData();" ><img src="images/previous.png" alt="Previous"></a>
+                    </td>
+                    <td rowspan="7" style="width: 20%; height: 335px; text-align: center;"> 
+                        <img  id="pimg" src="" alt="image" style="width: 335px; height: 335px;">
+                    </td>
+                    <td style="width: 50%; text-align: justify;"><div id="divDesc"></div></td>
+                    <td rowspan="7"  style="width: 15%; text-align: center;">
+                        <a href="#" onclick="fnGetNextData();" ><img src="images/next.png" alt="next"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><div id="divShipDtl"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="divCustRew"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="divPrice"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="divStockAval"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="divNoItems"></div></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"> 
+                        <input class="btncls" type="button" value="Buy" onclick="fnCallBuyerDtl();" />
+                        <div id="divHidden" style="display: none;"></div>
+                    </td>
+                </tr>
+            </table>
+            <div id="footer">
+                <p>Copyright &copy; Company Name | <a href="#">About Us</a> | <a href="#">Contact Us</a></p>
+            </div>
+        </div>
+    </body>
+</html>

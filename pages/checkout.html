@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Checkout Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="../css/style.css">
+        <script src="../js/main.js" ></script>
+        <script src="../js/commonfunction.js" ></script>
+    </head>
+    <body onload="fnGetDate(); fngetDataChkOut();">
+        <div id="main">
+            <div id="header">
+                <div id="logo">
+                    <div id="logo_text">
+                        <h1><a href="../index.html">Company Logo</a></h1>
+                        <h2>Tag Line</h2>
+                    </div>
+                    <span style="float: right; margin-top: 10px;">
+                        <i>
+                            <font color="white">
+                            Today's date is :
+                            <strong>
+                                <span id="time"></span>
+                            </strong>
+                            </font>
+                        </i>
+                    </span>
+                </div>
+                <div id="menubar">
+                    <ul id="menu">
+                        <li class="selected"><a href="../index.html">Home</a></li>
+                        <li><a href="#">Beauty</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <table style="margin: 0 auto; width: 70%; text-align: center; margin-top: 15px; margin-bottom: 15px; text-align: center;">
+                <tr>
+                    <td  style="width: 40%; text-align: center;" >
+                        <img src="" alt="image" id="imgchkout"  style="height: 300px;">
+                        <div id="divDescChkOut" style="text-align: justify; padding-top: 15px;"></div>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>First name</td>
+                                <td> : </td>
+                                <td><input type="text" id="txtFname" required maxlength="20" placeholder="First Name" /></td>
+                            </tr>
+                            <tr>
+                                <td>Last name</td>
+                                <td> : </td>
+                                <td><input type="text" id="txtLname" required maxlength="20" placeholder="Last Name" /></td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>:</td>
+                                <td><input type="text" id="txtAdd" maxlength="100" required placeholder="Address"></td>
+                            </tr>
+                            <tr>
+                                <td>State</td>
+                                <td> : </td>
+                                <td>
+                                    <select id="cmbState">
+                                        <option>--Select State--</option>
+                                        <option>TX</option>
+                                        <option>PA</option>
+                                        <option>CA</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Zip Code</td>
+                                <td>:</td>
+                                <td><input type="text" id="txtZipCode" required maxlength="5" placeholder="Zip Code" /></td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td> : </td>
+                                <td>
+                                    <input type="radio" id="rdoGenMale" name="rdoGender" value="Male" />Male
+                                    <input type="radio" id="rdoGenFemale" name="rdoGender" value="Female" />Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Card Number
+                                </td>
+                                <td>
+                                    :
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <img src="../images/payment_tab_credit_card.png"  style="width:75px; height: 28px; float: left;" alt="image" />
+                                    <div style="float: left;"><input placeholder="Card Number" type="text" id="txtcardno" maxlength="16"  style="padding-top:10px; width:175px;" required /></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Expiry Date
+                                </td>
+                                <td>
+                                    :
+                                </td>
+                                <td>
+                                    <input type="text" id="txtmonth" maxlength="2" style="width: 30px" required placeholder="MM" /> /
+                                    <input type="text" id="txtyear" maxlength="2" style="width: 30px" required placeholder="YY" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CVV
+                                </td>
+                                <td>
+                                    :
+                                </td>
+                                <td>
+                                    <input type="text" id="txtcvv" maxlength="3" style="width: 50px" required placeholder="CVV" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="text-align: center;">
+                                    <input type="button" id="btnValidate" class="btncls" value="Checkout" onclick="fnCheckout();" style="margin-top: 35px;" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div id="divHiddenChkout" style="display: none;"></div>
+            <div id="footer">
+                <p>Copyright &copy; Company Name | <a href="#">About Us</a> | <a href="#">Contact Us</a></p>
+            </div>
+        </div>
+    </body>
+</html>
